@@ -1,0 +1,233 @@
+.body {
+    font-family: sans-serif;
+}
+
+nav {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    padding: 5px 5px 0 15px;
+    gap: 10px;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+}
+
+.logo h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 17px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 5px 5px 0 5px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.nav-links-right {
+    display: flexbox;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 17px 30px 0 5px;
+}
+
+.nav-links-right button{
+    color: #333;
+    font-size: 1rem;
+    padding: 15px 25px 15px 25px;
+    
+    
+    
+}
+
+.nav-button1 {
+        color: #3247C6 !important;
+        border: 1px solid #3247C6;
+        border-radius: 5px;
+        margin-right: 40px;
+        background-color: white;
+}
+
+.nav-button2 {
+    color: white !important;
+    background-color: #E54F6D;
+    border: none;
+    border-radius: 5px;
+}
+
+.burger {
+    display: none;
+}
+
+/* From Uiverse.io by Cevorob */ 
+.burger {
+    position: relative;
+    float: right;
+    height: 30px;
+    width: 40px;
+    margin-top: -57px;
+    margin-right: 20px;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .burger input {
+    display: none;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+  
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+  
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+
+    .burger-menu {
+        z-index: 1000;
+        display: none;
+        flex-direction: column;
+        width: 200px; /* Adjust width as needed */
+        background: white;
+        position: absolute;
+        top: 40px; /* Adjust top position as needed */
+        left: -210px; /* Adjust left position to place it to the left of the burger button */
+        padding: 10px;
+    }
+    .burger-menu a {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+        border: 1px solid #3247C6;
+        padding: 10px;
+    }
+
+    .burger-menu a:hover {
+        box-shadow: 0 0 5px #3247C6;
+    }
+
+    .burger-a1 {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .burger-a5 {
+        border-radius: 0  0 5px 5px;
+    }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .nav-links-right {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .burger-menu a {
+        display: none;
+    }
+    .burger-menu .burger-a1,
+    .burger-menu .burger-a2 {
+        display: block;
+    }
+    .burger input:checked ~ .burger-menu {
+        display: block !important;
+
+    }
+    .burger input:checked ~ .burger-menu .burger-a2 {
+        border-radius: 0 0 5px 5px;
+
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .nav-links-right {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .burger-menu a {
+        display: block;
+    }
+    .burger input:checked ~ .burger-menu {
+        display: flex !important;
+    }
+    .burger input:checked ~ .burger-menu .burger-a2 {
+        border-radius: 0 0 0 0;
+
+    }
+}
+
